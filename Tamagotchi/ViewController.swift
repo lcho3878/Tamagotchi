@@ -7,11 +7,15 @@
 
 import UIKit
 
-class SelectViewController: UIViewController {
+class SelectViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        configureNavigationItem()
+    }
+    
+    private func configureNavigationItem() {
+        navigationItem.title = "다마고치 선택하기"
     }
 
 
