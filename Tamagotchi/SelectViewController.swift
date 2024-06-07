@@ -73,13 +73,20 @@ extension SelectViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = PopupViewController()
+        let popupVC = PopupViewController()
         let tamagotchi = tamagotchiList[indexPath.row]
-        vc.tamagotchi = tamagotchi
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true)
+        popupVC.delegate = self
+        popupVC.tamagotchi = tamagotchi
+        popupVC.modalPresentationStyle = .overFullScreen
+        present(popupVC, animated: false)
     }
     
-    
+}
+
+extension SelectViewController: PopupViewControllerDelegate {
+    func changeRootViewController() {
+        let mainVC = MainViewController()
+        navigationController?.setViewControllers([mainVC], animated: true)
+    }
 }
 

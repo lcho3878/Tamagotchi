@@ -8,8 +8,14 @@
 import UIKit
 import SnapKit
 
+protocol PopupViewControllerDelegate: AnyObject {
+    func changeRootViewController ()
+}
+
 class PopupViewController: UIViewController {
     var tamagotchi: Tamagotchi!
+    
+    weak var delegate: PopupViewControllerDelegate?
     
     private let mainView: UIView = {
         let view = UIView()
@@ -83,7 +89,6 @@ class PopupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .clear
         configureHierarchy()
         configureLayout()
         configureUI()
@@ -108,6 +113,7 @@ class PopupViewController: UIViewController {
         mainView.addSubview(cancelButton)
         
     }
+    
     private func configureLayout() {
         
         mainView.snp.makeConstraints {
@@ -161,13 +167,15 @@ class PopupViewController: UIViewController {
     }
     
     private func configureUI() {
+        view.backgroundColor = .clear
         mainImageView.image = tamagotchi.tamagotchiImage
         nameLabel.text = tamagotchi.name
         contentLabel.text = tamagotchi.content
     }
 
     @objc private func okButtonClicked() {
-        self.dismiss(animated: true)
+        delegate?.changeRootViewController()
+        self.dismiss(animated: false)
     }
     
     @objc private func cancelButtonClicked() {
