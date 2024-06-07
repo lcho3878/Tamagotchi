@@ -107,12 +107,6 @@ class MainViewController: BaseViewController {
         configureUI()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        configureNavigationItem()
-        configureUI()
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tamagotchiImageView.layer.cornerRadius = tamagotchiImageView.frame.width / 2
@@ -237,7 +231,17 @@ class MainViewController: BaseViewController {
     @objc
     private func barbuttonClicked() {
         let settingVC = SettingViewController()
+        settingVC.delegate = self
         navigationController?.pushViewController(settingVC, animated: true)
     }
 
+}
+
+extension MainViewController: SettingViewControllerDelegate {
+    
+    func updateUI() {
+        configureNavigationItem()
+        configureUI()
+    }
+    
 }

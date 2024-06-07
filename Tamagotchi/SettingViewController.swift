@@ -8,7 +8,15 @@
 import UIKit
 import SnapKit
 
+protocol SettingViewControllerDelegate: AnyObject {
+    
+    func updateUI()
+    
+}
+
 class SettingViewController: BaseViewController {
+    
+    weak var delegate: SettingViewControllerDelegate?
     
     private let settingTableView: UITableView = {
         let tv = UITableView()
@@ -101,6 +109,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SettingViewController: NicknameViewControllerDelegate {
     func updateUI() {
+        delegate?.updateUI()
         settingTableView.reloadData()
     }
 }
