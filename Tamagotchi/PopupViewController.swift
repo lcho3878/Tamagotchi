@@ -174,6 +174,10 @@ class PopupViewController: UIViewController {
     }
 
     @objc private func okButtonClicked() {
+        guard tamagotchi.tamagochiType != .none else {
+            showAlert("준비중입니다.")
+            return
+        }
         delegate?.changeRootViewController()
         User.tamagotchi = tamagotchi
         self.dismiss(animated: false)
