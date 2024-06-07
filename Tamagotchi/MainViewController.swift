@@ -17,7 +17,7 @@ class MainViewController: BaseViewController {
     }
     
     private func configureNavigationItem() {
-        navigationItem.title = "대장님의 다마고치"
+        navigationItem.title = "\(User.name)님의 다마고치"
     }
     
     private func configureHierarchy() {}

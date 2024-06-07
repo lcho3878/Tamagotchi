@@ -78,7 +78,7 @@ extension SelectViewController: UICollectionViewDataSource, UICollectionViewDele
         popupVC.delegate = self
         popupVC.tamagotchi = tamagotchi
         popupVC.modalPresentationStyle = .overFullScreen
-        present(popupVC, animated: false)
+        present(popupVC, animated: true)
     }
     
 }
@@ -86,7 +86,7 @@ extension SelectViewController: UICollectionViewDataSource, UICollectionViewDele
 extension SelectViewController: PopupViewControllerDelegate {
     func changeRootViewController() {
         let mainVC = MainViewController()
-        navigationController?.setViewControllers([mainVC], animated: true)
+        navigationController?.setViewControllers([mainVC], animated: false)
     }
 }
 
