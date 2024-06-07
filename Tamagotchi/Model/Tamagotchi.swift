@@ -7,11 +7,26 @@
 
 import UIKit
 
+struct User {
+    static var name = "대장"
+    static var water = 0
+    static var rice = 0
+    static var level: Int {
+        return 9
+    }
+}
+
 struct Tamagotchi {
     let name: String
-    let level: Int
-    let rice: Int
-    let water: Int
+    
+    init (name: String? = nil) {
+        if let name {
+            self.name = name
+        }
+        else {
+            self.name = "준비중입니다."
+        }
+    }
     var tamagotchiImage: UIImage {
         var head: String = ""
         switch name {
@@ -20,30 +35,30 @@ struct Tamagotchi {
         case "반짝반짝 다마고치": head = "3"
         default: break
         }
-        return UIImage(named: "\(head)-\(level)") ?? UIImage.no
+        return UIImage(named: "\(head)-\(User.level)") ?? UIImage.no
     }
     var content: String {
         return "\(name)에 대한 설명(임시)"
     }
 }
 
-let tamagotchiList = [Tamagotchi(name: "따끔따끔 다마고치", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "방실방실 다마고치", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "반짝반짝 다마고치", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
-
+let tamagotchiList = [Tamagotchi(name: "따끔따끔 다마고치"),
+                      Tamagotchi(name: "방실방실 다마고치"),
+                      Tamagotchi(name: "반짝반짝 다마고치"),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
+                      Tamagotchi(),
 ]
