@@ -228,7 +228,8 @@ class MainViewController: BaseViewController {
     
     @objc
     private func barbuttonClicked() {
-        
+        let settingVC = SettingViewController()
+        navigationController?.pushViewController(settingVC, animated: true)
     }
 
 }
