@@ -26,6 +26,7 @@
 		544BE7F82C130BEC00F2D4E9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7F72C130BEC00F2D4E9 /* UITextField+Extension.swift */; };
 		544BE7FA2C132B3C00F2D4E9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7F92C132B3C00F2D4E9 /* SettingViewController.swift */; };
 		544BE7FC2C132F4000F2D4E9 /* SettingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7FB2C132F4000F2D4E9 /* SettingMenu.swift */; };
+		544BE7FE2C13354800F2D4E9 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7FD2C13354800F2D4E9 /* NicknameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		544BE7F72C130BEC00F2D4E9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		544BE7F92C132B3C00F2D4E9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		544BE7FB2C132F4000F2D4E9 /* SettingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenu.swift; sourceTree = "<group>"; };
+		544BE7FD2C13354800F2D4E9 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				544BE7F12C12D68100F2D4E9 /* PopupViewController.swift */,
 				544BE7F32C12E86800F2D4E9 /* MainViewController.swift */,
 				544BE7F92C132B3C00F2D4E9 /* SettingViewController.swift */,
+				544BE7FD2C13354800F2D4E9 /* NicknameViewController.swift */,
 			);
 			path = Tamagotchi;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				544BE7F22C12D68100F2D4E9 /* PopupViewController.swift in Sources */,
 				544BE7E22C12C3B200F2D4E9 /* SelectViewCell.swift in Sources */,
 				5422F2EF2C12C1270093932B /* BaseViewController.swift in Sources */,
+				544BE7FE2C13354800F2D4E9 /* NicknameViewController.swift in Sources */,
 				544BE7F42C12E86800F2D4E9 /* MainViewController.swift in Sources */,
 				544BE7FA2C132B3C00F2D4E9 /* SettingViewController.swift in Sources */,
 				544BE7E42C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift in Sources */,

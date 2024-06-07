@@ -107,6 +107,12 @@ class MainViewController: BaseViewController {
         configureUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigationItem()
+        configureUI()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tamagotchiImageView.layer.cornerRadius = tamagotchiImageView.frame.width / 2
@@ -193,6 +199,7 @@ class MainViewController: BaseViewController {
         tamagotchiNameLabel.text = User.tamagotchi?.name
         tamagotchiImageView.image = User.tamagotchi?.tamagotchiImage
         dataLabel.text = "LV\(User.level) • 밥알 \(User.rice)개 • 물방울 \(User.water)개"
+        commentLabel.text = "\(User.name)님 오늘 과제는 하셨나요?"
     }
     
     @objc

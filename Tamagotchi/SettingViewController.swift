@@ -32,7 +32,6 @@ class SettingViewController: BaseViewController {
     }
     
     private func configureTableView() {
-//        settingTableView.
         settingTableView.delegate = self
         settingTableView.dataSource = self
     }
@@ -65,7 +64,9 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.font = .boldSystemFont(ofSize: 13)
         cell.textLabel?.textColor = .black
         
-        cell.detailTextLabel?.text = data.subtitle
+        if indexPath.row == 0 {
+            cell.detailTextLabel?.text = User.name
+        }
         cell.detailTextLabel?.font = .systemFont(ofSize: 13)
         cell.detailTextLabel?.textColor = .font
         
@@ -76,7 +77,9 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            print(indexPath.row)
+            let nicknameVC = NicknameViewController()
+            nicknameVC.delegate = self
+            navigationController?.pushViewController(nicknameVC, animated: true)
         case 1:
             let selectVC = SelectViewController()
             navigationController?.pushViewController(selectVC, animated: true)
@@ -84,5 +87,11 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             print(indexPath.row)
         default: break
         }
+    }
+}
+
+extension SettingViewController: NicknameViewControllerDelegate {
+    func updateUI() {
+        settingTableView.reloadData()
     }
 }
