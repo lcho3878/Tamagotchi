@@ -23,6 +23,7 @@
 		544BE7F22C12D68100F2D4E9 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7F12C12D68100F2D4E9 /* PopupViewController.swift */; };
 		544BE7F42C12E86800F2D4E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7F32C12E86800F2D4E9 /* MainViewController.swift */; };
 		544BE7F62C12EFEF00F2D4E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7F52C12EFEF00F2D4E9 /* User.swift */; };
+		544BE7F82C130BEC00F2D4E9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7F72C130BEC00F2D4E9 /* UITextField+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		544BE7F12C12D68100F2D4E9 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		544BE7F32C12E86800F2D4E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		544BE7F52C12EFEF00F2D4E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		544BE7F72C130BEC00F2D4E9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				5422F2EB2C12C0650093932B /* UIColor+Extension.swift */,
 				544BE7E32C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift */,
+				544BE7F72C130BEC00F2D4E9 /* UITextField+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				5422F2DC2C12BE210093932B /* SelectViewController.swift in Sources */,
 				544BE7EF2C12D23B00F2D4E9 /* Tamagotchi.swift in Sources */,
 				544BE7EA2C12D07700F2D4E9 /* UIPaddingLabel.swift in Sources */,
+				544BE7F82C130BEC00F2D4E9 /* UITextField+Extension.swift in Sources */,
 				5422F2D82C12BE210093932B /* AppDelegate.swift in Sources */,
 				5422F2DA2C12BE210093932B /* SceneDelegate.swift in Sources */,
 				544BE7E62C12C62600F2D4E9 /* ReusableProtocol.swift in Sources */,
