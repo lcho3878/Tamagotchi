@@ -12,6 +12,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .background
+        navigationController?.navigationBar.tintColor = .font
     }
     
     func showAlert(_ title: String) {
