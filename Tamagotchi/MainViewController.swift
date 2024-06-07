@@ -117,6 +117,8 @@ class MainViewController: BaseViewController {
     private func configureNavigationItem() {
         navigationItem.title = "\(User.name)님의 다마고치"
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.font]
+        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "person.circle")?.withTintColor(.font, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(barbuttonClicked))
+        navigationItem.rightBarButtonItem = rightBarButton
     }
     
     private func configureHierarchy() {
@@ -222,6 +224,11 @@ class MainViewController: BaseViewController {
         }
         User.water += n
         configureUI()
+    }
+    
+    @objc
+    private func barbuttonClicked() {
+        
     }
 
 }
