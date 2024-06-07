@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class PopupViewController: UIViewController {
+    var tamagotchi: Tamagotchi!
     
     private let mainView: UIView = {
         let view = UIView()
@@ -85,7 +86,7 @@ class PopupViewController: UIViewController {
         view.backgroundColor = .clear
         configureHierarchy()
         configureLayout()
-
+        configureUI()
     }
     
     override func viewDidLayoutSubviews() {
@@ -157,6 +158,12 @@ class PopupViewController: UIViewController {
             $0.bottom.equalTo(okButton.snp.top)
         }
         
+    }
+    
+    private func configureUI() {
+        mainImageView.image = tamagotchi.tamagotchiImage
+        nameLabel.text = tamagotchi.name
+        contentLabel.text = tamagotchi.content
     }
 
     @objc private func okButtonClicked() {

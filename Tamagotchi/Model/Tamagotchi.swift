@@ -22,6 +22,9 @@ struct Tamagotchi {
         }
         return UIImage(named: "\(head)-\(level)") ?? UIImage.no
     }
+    var content: String {
+        return "\(name)에 대한 설명(임시)"
+    }
 }
 
 let tamagotchiList = [Tamagotchi(name: "따끔따끔 다마고치", level: 1, rice: 0, water: 0),

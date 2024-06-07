@@ -42,7 +42,8 @@ class SelectViewController: BaseViewController {
     
     private func configureLayout() {
         collectionVIew.snp.makeConstraints {
-            $0.edges.equalTo(view.safeAreaLayoutGuide)
+            $0.top.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
+            $0.bottom.equalTo(view)
         }
     }
     
@@ -73,6 +74,8 @@ extension SelectViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = PopupViewController()
+        let tamagotchi = tamagotchiList[indexPath.row]
+        vc.tamagotchi = tamagotchi
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
     }
