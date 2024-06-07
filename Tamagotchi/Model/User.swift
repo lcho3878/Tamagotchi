@@ -8,6 +8,7 @@
 import Foundation
 
 struct User {
+    
     static var name: String {
         get {
             if let name = UserDefaults.standard.string(forKey: "name") {
@@ -47,6 +48,18 @@ struct User {
         case 10...100: return Int(n / 10)
         default:
             return 10
+        }
+    }
+    
+    static var tamagotchi: Tamagotchi? {
+        get {
+            guard let tamagotchi = UserDefaults.standard.object(forKey: "tamagotchi") as? Tamagotchi else {
+                return nil
+            }
+            return tamagotchi
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "tamagotchi")
         }
     }
 }
