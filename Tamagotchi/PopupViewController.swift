@@ -35,7 +35,7 @@ class PopupViewController: UIViewController {
     
     private let nameLabel: UIPaddingLabel = {
         let lb = UIPaddingLabel()
-        lb.text = "방실방실 다마고치"
+        lb.text = "다마고치 이름"
         lb.textColor = .font
         lb.font = .boldSystemFont(ofSize: 14)
         lb.textAlignment = .center
@@ -53,7 +53,7 @@ class PopupViewController: UIViewController {
     
     private let contentLabel: UILabel = {
         let lb = UILabel()
-        lb.text = "테스트 줄간격\n테스트 줄간격\n테스트 줄간격\n테스트 줄간격\n테스트 줄간격\n테스트 줄간격\n테스트 줄간격\n테스트 줄간격"
+        lb.text = "다마고치 내용"
         lb.font = .systemFont(ofSize: 14)
         lb.textColor = .font
         lb.textAlignment = .center
@@ -69,7 +69,7 @@ class PopupViewController: UIViewController {
     
     private let okButton: UIButton = {
         let button = UIButton()
-        button.setTitle("시작하기", for: .normal)
+        button.setTitle(User.tamagotchi == nil ? "시작하기" : "변경하기", for: .normal)
         button.setTitleColor(.font, for: .normal)
         button.addTarget(self, action: #selector(okButtonClicked), for: .touchUpInside)
         return button

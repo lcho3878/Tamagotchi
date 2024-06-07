@@ -23,6 +23,12 @@ class SettingViewController: BaseViewController {
         configureHierarchy()
         configureLayout()
         configureTableView()
+        configureNavigationItem()
+    }
+    
+    private func configureNavigationItem() {
+        navigationItem.title = "설정"
+        navigationItem.backButtonDisplayMode = .default
     }
     
     private func configureTableView() {
@@ -67,4 +73,16 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            print(indexPath.row)
+        case 1:
+            let selectVC = SelectViewController()
+            navigationController?.pushViewController(selectVC, animated: true)
+        case 2:
+            print(indexPath.row)
+        default: break
+        }
+    }
 }

@@ -119,6 +119,7 @@ class MainViewController: BaseViewController {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.font]
         let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "person.circle")?.withTintColor(.font, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(barbuttonClicked))
         navigationItem.rightBarButtonItem = rightBarButton
+        navigationItem.backButtonDisplayMode = .minimal
     }
     
     private func configureHierarchy() {

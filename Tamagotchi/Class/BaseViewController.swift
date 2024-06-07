@@ -13,6 +13,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .background
         navigationController?.navigationBar.tintColor = .font
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.font]
     }
     
     func showAlert(_ title: String) {
