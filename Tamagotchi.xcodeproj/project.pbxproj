@@ -16,6 +16,9 @@
 		5422F2EF2C12C1270093932B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5422F2EE2C12C1270093932B /* BaseViewController.swift */; };
 		544BE7E02C12C29300F2D4E9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 544BE7DF2C12C29300F2D4E9 /* SnapKit */; };
 		544BE7E22C12C3B200F2D4E9 /* SelectViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7E12C12C3B200F2D4E9 /* SelectViewCell.swift */; };
+		544BE7E42C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7E32C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift */; };
+		544BE7E62C12C62600F2D4E9 /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7E52C12C62600F2D4E9 /* ReusableProtocol.swift */; };
+		544BE7EA2C12D07700F2D4E9 /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7E92C12D07700F2D4E9 /* UIPaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		5422F2EB2C12C0650093932B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5422F2EE2C12C1270093932B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		544BE7E12C12C3B200F2D4E9 /* SelectViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewCell.swift; sourceTree = "<group>"; };
+		544BE7E32C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		544BE7E52C12C62600F2D4E9 /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
+		544BE7E92C12D07700F2D4E9 /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			children = (
 				5422F2F02C12C12B0093932B /* Class */,
 				5422F2ED2C12C0680093932B /* Extension */,
+				544BE7E72C12D05F00F2D4E9 /* Protocol */,
 				5422F2D72C12BE210093932B /* AppDelegate.swift */,
 				5422F2D92C12BE210093932B /* SceneDelegate.swift */,
 				5422F2DB2C12BE210093932B /* SelectViewController.swift */,
@@ -79,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				5422F2EB2C12C0650093932B /* UIColor+Extension.swift */,
+				544BE7E32C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -87,8 +95,17 @@
 			isa = PBXGroup;
 			children = (
 				5422F2EE2C12C1270093932B /* BaseViewController.swift */,
+				544BE7E92C12D07700F2D4E9 /* UIPaddingLabel.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		544BE7E72C12D05F00F2D4E9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				544BE7E52C12C62600F2D4E9 /* ReusableProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +186,12 @@
 			files = (
 				544BE7E22C12C3B200F2D4E9 /* SelectViewCell.swift in Sources */,
 				5422F2EF2C12C1270093932B /* BaseViewController.swift in Sources */,
+				544BE7E42C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift in Sources */,
 				5422F2DC2C12BE210093932B /* SelectViewController.swift in Sources */,
+				544BE7EA2C12D07700F2D4E9 /* UIPaddingLabel.swift in Sources */,
 				5422F2D82C12BE210093932B /* AppDelegate.swift in Sources */,
 				5422F2DA2C12BE210093932B /* SceneDelegate.swift in Sources */,
+				544BE7E62C12C62600F2D4E9 /* ReusableProtocol.swift in Sources */,
 				5422F2EC2C12C0650093932B /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

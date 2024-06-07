@@ -12,17 +12,18 @@ class SelectViewController: BaseViewController {
 
     private let collectionVIew: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        let n: CGFloat = 2
+        let n: CGFloat = 0
         layout.minimumLineSpacing = n
         layout.minimumInteritemSpacing = n
         
         let w = Int(UIScreen.main.bounds.width) / 3 - Int(n)
-        layout.itemSize = CGSize(width: w, height: w)
+        layout.itemSize = CGSize(width: w, height: w + 30)
         
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
        
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .clear
         
         return cv
     }()
@@ -53,7 +54,6 @@ class SelectViewController: BaseViewController {
         collectionVIew.delegate = self
         collectionVIew.dataSource = self
         collectionVIew.register(SelectViewCell.self, forCellWithReuseIdentifier: SelectViewCell.id)
-//        collectionVIew.
     }
 
 
