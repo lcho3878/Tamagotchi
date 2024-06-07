@@ -64,7 +64,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.font = .boldSystemFont(ofSize: 13)
         cell.textLabel?.textColor = .black
         
-        if indexPath.row == 0 {
+        if data.type == .changeName {
             cell.detailTextLabel?.text = User.name
         }
         cell.detailTextLabel?.font = .systemFont(ofSize: 13)
@@ -75,15 +75,15 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
+        switch SettingMenuList.menuList[indexPath.row].type {
+        case .changeName:
             let nicknameVC = NicknameViewController()
             nicknameVC.delegate = self
             navigationController?.pushViewController(nicknameVC, animated: true)
-        case 1:
+        case .changeTamagotchi:
             let selectVC = SelectViewController()
             navigationController?.pushViewController(selectVC, animated: true)
-        case 2:
+        case .resetData:
             let alert = UIAlertController(title: "경고", message: "정말로 데이터를 초기화 하시겠습니까?", preferredStyle: .alert)
             let ok = UIAlertAction(title: "확인", style: .destructive){ _ in
                 User.removeData()
@@ -95,7 +95,6 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(ok)
             alert.addAction(cancel)
             present(alert, animated: true)
-        default: break
         }
     }
 }
