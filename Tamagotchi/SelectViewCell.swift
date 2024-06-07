@@ -20,9 +20,10 @@ class SelectViewCell: UICollectionViewCell {
     private let nameLabel: UIPaddingLabel = {
         let lb = UIPaddingLabel()
         lb.text = "다마고치 이름"
+        lb.textColor = .font
         lb.font = .systemFont(ofSize: 13)
         lb.layer.borderWidth = 1
-        lb.layer.borderColor = UIColor.black.cgColor
+        lb.layer.borderColor = UIColor.border.cgColor
         lb.layer.cornerRadius = 4
         lb.textAlignment = .center
         return lb

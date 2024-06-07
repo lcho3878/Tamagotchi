@@ -20,7 +20,6 @@ struct Tamagotchi {
         case "반짝반짝 다마고치": head = "3"
         default: break
         }
-        print("\(head)-\(level)")
         return UIImage(named: "\(head)-\(level)") ?? UIImage.no
     }
 }
@@ -28,6 +27,20 @@ struct Tamagotchi {
 let tamagotchiList = [Tamagotchi(name: "따끔따끔 다마고치", level: 1, rice: 0, water: 0),
                       Tamagotchi(name: "방실방실 다마고치", level: 1, rice: 0, water: 0),
                       Tamagotchi(name: "반짝반짝 다마고치", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
+                      Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
                       Tamagotchi(name: "준비중입니다", level: 1, rice: 0, water: 0),
 
 ]
