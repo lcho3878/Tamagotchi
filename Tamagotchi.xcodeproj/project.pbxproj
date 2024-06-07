@@ -19,6 +19,7 @@
 		544BE7E42C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7E32C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift */; };
 		544BE7E62C12C62600F2D4E9 /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7E52C12C62600F2D4E9 /* ReusableProtocol.swift */; };
 		544BE7EA2C12D07700F2D4E9 /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7E92C12D07700F2D4E9 /* UIPaddingLabel.swift */; };
+		544BE7EF2C12D23B00F2D4E9 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BE7EE2C12D23B00F2D4E9 /* Tamagotchi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		544BE7E32C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		544BE7E52C12C62600F2D4E9 /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
 		544BE7E92C12D07700F2D4E9 /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
+		544BE7EE2C12D23B00F2D4E9 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		5422F2D62C12BE210093932B /* Tamagotchi */ = {
 			isa = PBXGroup;
 			children = (
+				544BE7ED2C12D23300F2D4E9 /* Model */,
 				5422F2F02C12C12B0093932B /* Class */,
 				5422F2ED2C12C0680093932B /* Extension */,
 				544BE7E72C12D05F00F2D4E9 /* Protocol */,
@@ -106,6 +109,14 @@
 				544BE7E52C12C62600F2D4E9 /* ReusableProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		544BE7ED2C12D23300F2D4E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				544BE7EE2C12D23B00F2D4E9 /* Tamagotchi.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				5422F2EF2C12C1270093932B /* BaseViewController.swift in Sources */,
 				544BE7E42C12C61300F2D4E9 /* UICollectionViewCell+Extension.swift in Sources */,
 				5422F2DC2C12BE210093932B /* SelectViewController.swift in Sources */,
+				544BE7EF2C12D23B00F2D4E9 /* Tamagotchi.swift in Sources */,
 				544BE7EA2C12D07700F2D4E9 /* UIPaddingLabel.swift in Sources */,
 				5422F2D82C12BE210093932B /* AppDelegate.swift in Sources */,
 				5422F2DA2C12BE210093932B /* SceneDelegate.swift in Sources */,

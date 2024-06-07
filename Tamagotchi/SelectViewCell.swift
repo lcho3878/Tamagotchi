@@ -68,6 +68,11 @@ class SelectViewCell: UICollectionViewCell {
         }
     }
     
+    func configureData(_ data: Tamagotchi) {
+        mainImageView.image = data.tamagotchiImage
+        nameLabel.text = data.name
+    }
+    
 
     
 }

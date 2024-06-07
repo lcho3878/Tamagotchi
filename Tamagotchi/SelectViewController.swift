@@ -61,11 +61,13 @@ class SelectViewController: BaseViewController {
 
 extension SelectViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return tamagotchiList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectViewCell.id, for: indexPath) as? SelectViewCell else { return UICollectionViewCell() }
+        let data = tamagotchiList[indexPath.row]
+        cell.configureData(data)
         return cell
     }
     
