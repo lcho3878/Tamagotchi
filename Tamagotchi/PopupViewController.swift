@@ -175,6 +175,7 @@ class PopupViewController: UIViewController {
 
     @objc private func okButtonClicked() {
         delegate?.changeRootViewController()
+        User.tamagotchi = tamagotchi
         self.dismiss(animated: false)
     }
     

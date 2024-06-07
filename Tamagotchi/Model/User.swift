@@ -53,13 +53,14 @@ struct User {
     
     static var tamagotchi: Tamagotchi? {
         get {
-            guard let tamagotchi = UserDefaults.standard.object(forKey: "tamagotchi") as? Tamagotchi else {
+            guard let rawValue = UserDefaults.standard.string(forKey: "tamagotchiType") else {
                 return nil
             }
-            return tamagotchi
+            let tamagotchiType = TamagotchiType(rawValue: rawValue)!
+            return Tamagotchi(tamagochiType: tamagotchiType)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "tamagotchi")
+            UserDefaults.standard.set(newValue?.tamagochiType.rawValue, forKey: "tamagotchiType")
         }
     }
 }

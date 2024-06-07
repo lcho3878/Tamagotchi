@@ -187,6 +187,8 @@ class MainViewController: BaseViewController {
     }
     
     private func configureUI() {
+        tamagotchiNameLabel.text = User.tamagotchi?.name
+        tamagotchiImageView.image = User.tamagotchi?.tamagotchiImage
         dataLabel.text = "LV\(User.level) • 밥알 \(User.rice)개 • 물방울 \(User.water)개"
     }
     

@@ -16,7 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let vc = SelectViewController()
+        
+        let vc: UIViewController
+        if let tamagotchi = User.tamagotchi {
+            vc = MainViewController()
+        }
+        else {
+            vc = SelectViewController()
+        }
         let nav = UINavigationController(rootViewController: vc)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
