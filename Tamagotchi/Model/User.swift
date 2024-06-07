@@ -63,4 +63,11 @@ struct User {
             UserDefaults.standard.set(newValue?.tamagochiType.rawValue, forKey: "tamagotchiType")
         }
     }
+    
+    static func removeData() {
+        UserDefaults.standard.removeObject(forKey: "name")
+        UserDefaults.standard.removeObject(forKey: "water")
+        UserDefaults.standard.removeObject(forKey: "rice")
+        UserDefaults.standard.removeObject(forKey: "tamagotchiType")
+    }
 }

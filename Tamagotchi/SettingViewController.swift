@@ -84,7 +84,17 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             let selectVC = SelectViewController()
             navigationController?.pushViewController(selectVC, animated: true)
         case 2:
-            print(indexPath.row)
+            let alert = UIAlertController(title: "경고", message: "정말로 데이터를 초기화 하시겠습니까?", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .destructive){ _ in
+                User.removeData()
+                let selectVC = SelectViewController()
+                self.navigationController?.setViewControllers([selectVC], animated: false)
+            }
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
+             
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            present(alert, animated: true)
         default: break
         }
     }
