@@ -21,6 +21,7 @@ struct User {
             UserDefaults.standard.set(newValue, forKey: "name")
         }
     }
+    
     static var water: Int {
         get {
             return UserDefaults.standard.integer(forKey: "water")
@@ -29,6 +30,7 @@ struct User {
             UserDefaults.standard.set(newValue, forKey: "water")
         }
     }
+    
     static var rice: Int {
         get {
             return UserDefaults.standard.integer(forKey: "rice")
@@ -37,6 +39,7 @@ struct User {
             UserDefaults.standard.set(newValue, forKey: "rice")
         }
     }
+    
     static var level: Int {
         let n: Double = Double((rice / 5) + (water / 2))
         switch n {

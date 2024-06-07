@@ -72,6 +72,7 @@ class MainViewController: BaseViewController {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.border.cgColor
         button.layer.cornerRadius = 4
+        button.addTarget(self, action: #selector(riceButtonClicked), for: .touchUpInside)
         return button
     }()
     
@@ -94,6 +95,7 @@ class MainViewController: BaseViewController {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.border.cgColor
         button.layer.cornerRadius = 4
+        button.addTarget(self, action: #selector(waterButtonClicked), for: .touchUpInside)
         return button
     }()
     
@@ -102,6 +104,7 @@ class MainViewController: BaseViewController {
         configureNavigationItem()
         configureHierarchy()
         configureLayout()
+        configureUI()
     }
     
     override func viewDidLayoutSubviews() {
@@ -169,7 +172,7 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(riceTextField)
             $0.centerY.equalTo(riceTextField)
             $0.leading.equalTo(riceTextField.snp.trailing).offset(12)
-            $0.trailing.equalTo(dataLabel).offset(16)
+            $0.width.equalTo(70)
         }
         
         waterTextField.snp.makeConstraints {
@@ -181,6 +184,42 @@ class MainViewController: BaseViewController {
             $0.height.leading.trailing.equalTo(riceButton)
             $0.centerY.equalTo(waterTextField)
         }
+    }
+    
+    private func configureUI() {
+        dataLabel.text = "LV\(User.level) • 밥알 \(User.rice)개 • 물방울 \(User.water)개"
+    }
+    
+    @objc
+    private func riceButtonClicked() {
+        guard let input = riceTextField.text, input != "" else {
+            User.rice += 1
+            configureUI()
+            return
+        }
+        
+        guard let n = Int(input), n < 100, n > 0 else {
+            showAlert("1~99 사이의 정수를 입력해주세요")
+            return
+        }
+        User.rice += n
+        configureUI()
+    }
+    
+    @objc
+    private func waterButtonClicked() {
+        guard let input = waterTextField.text, input != "" else {
+            User.water += 1
+            configureUI()
+            return
+        }
+        
+        guard let n = Int(input), n < 100, n > 0 else {
+            showAlert("1~99 사이의 정수를 입력해주세요")
+            return
+        }
+        User.water += n
+        configureUI()
     }
 
 }
