@@ -34,8 +34,8 @@ struct Tamagotchi {
         return UIImage(named: "\(head)-\(User.level < 10 ? User.level : 9)") ?? UIImage.no
     }
     
-    var content: String {
-        return "\(name)에 대한 설명(임시)"
+    var content: String? {
+        return TamagotchiData.tamagotchiDesciption[tamagochiType]
     }
     
     static var randomScript: String {
@@ -45,6 +45,13 @@ struct Tamagotchi {
 }
 
 struct TamagotchiData {
+    
+    static let tamagotchiDesciption: [TamagotchiType: String] = [
+        .bangsil: "저는 방실방실 다마고치입니당 키는 100km 몸무게는 150톤이에용 성격은 화끈하고 날라다닙니당~! 열심히 잘 클 자신은 있당니당 방실방실!!",
+        .banjjag: "저는 반짝반짝 다마고치에요. 저는 특징을 모르겠어여 대충 키워주세요. 하이요 주인님ㅋ",
+        .ttakkeum: "저는 선인장 다마고치 입니다. 키는 2cm 몸무게는 150g이에요. 성격은 소심하지만 마음은 따뜻해요. 열심히 잘 클 자신은 있답니다. 반가워요 주인님!!!",
+        .none: "준비중입니다."
+    ]
 
     static let tamagotchiList = [Tamagotchi(tamagochiType: .ttakkeum),
                                  Tamagotchi(tamagochiType: .bangsil),
