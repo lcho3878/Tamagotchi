@@ -62,19 +62,19 @@ class SelectViewController: BaseViewController {
 
 extension SelectViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tamagotchiList.count
+        return TamagotchiData.tamagotchiList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectViewCell.id, for: indexPath) as? SelectViewCell else { return UICollectionViewCell() }
-        let data = tamagotchiList[indexPath.row]
+        let data =  TamagotchiData.tamagotchiList[indexPath.row]
         cell.configureData(data)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let popupVC = PopupViewController()
-        let tamagotchi = tamagotchiList[indexPath.row]
+        let tamagotchi =  TamagotchiData.tamagotchiList[indexPath.row]
         popupVC.delegate = self
         popupVC.tamagotchi = tamagotchi
         popupVC.modalPresentationStyle = .overFullScreen

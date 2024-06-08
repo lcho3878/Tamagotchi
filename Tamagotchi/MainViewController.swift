@@ -193,7 +193,7 @@ class MainViewController: BaseViewController {
         tamagotchiNameLabel.text = User.tamagotchi?.name
         tamagotchiImageView.image = User.tamagotchi?.tamagotchiImage
         dataLabel.text = "LV\(User.level) • 밥알 \(User.rice)개 • 물방울 \(User.water)개"
-        commentLabel.text = "\(User.name)님 오늘 과제는 하셨나요?"
+        commentLabel.text = Tamagotchi.randomScript
     }
     
     @objc

@@ -33,32 +33,51 @@ struct Tamagotchi {
         
         return UIImage(named: "\(head)-\(User.level < 10 ? User.level : 9)") ?? UIImage.no
     }
+    
     var content: String {
         return "\(name)에 대한 설명(임시)"
     }
+    
+    static var randomScript: String {
+        let i = Int.random(in: 0..<TamagotchiData.scripts.count)
+        return TamagotchiData.scripts[i]
+    }
 }
 
-let tamagotchiList = [Tamagotchi(tamagochiType: .ttakkeum),
-                      Tamagotchi(tamagochiType: .bangsil),
-                      Tamagotchi(tamagochiType: .banjjag),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      Tamagotchi(tamagochiType: .none),
-                      
-                      
-]
+struct TamagotchiData {
+
+    static let tamagotchiList = [Tamagotchi(tamagochiType: .ttakkeum),
+                                 Tamagotchi(tamagochiType: .bangsil),
+                                 Tamagotchi(tamagochiType: .banjjag),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+                                 Tamagotchi(tamagochiType: .none),
+    ]
+    
+    static var scripts: [String] {
+        return [
+            "\(User.name)님 깃허브 푸시 하셨어용?",
+            "배고파요 밥주세요~",
+            "목말라요~",
+            "\(User.name)님 오늘 과제 하셨어용?",
+            "하이요 \(User.name)님",
+            "어떻게 대장이름이 \(User.name) ㅋㅋ",
+        ]
+    }
+    
+}
